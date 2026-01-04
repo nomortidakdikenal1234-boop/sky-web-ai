@@ -14,9 +14,9 @@ export default function Home() {
   // 2. Inisialisasi genAI (Pastikan nama variabelnya sama)
   const genAI = new GoogleGenerativeAI(apiKey);
 
-  // 3. Inisialisasi model (Ubah dari 2.5 ke 1.5)
+  // 3. Inisialisasi model
   const model = genAI.getGenerativeModel(
-  { model: "gemini-1.5-flash" } // Gunakan versi 1.5 yang stabil
+  { model: "gemini-1.5-flash" }
   );
 
   // Auto scroll ke bawah
