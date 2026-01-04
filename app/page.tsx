@@ -14,9 +14,10 @@ export default function Home() {
   // 2. Inisialisasi genAI (Pastikan nama variabelnya sama)
   const genAI = new GoogleGenerativeAI(apiKey);
 
-  // 3. Inisialisasi model
+  // 3. Inisialisasi model (Gunakan format ini untuk menghindari error 404)
   const model = genAI.getGenerativeModel(
-  { model: "gemini-1.5-flash" }
+  { model: "gemini-1.5-flash" },
+  { apiVersion: "v1" } // Tambahkan ini secara spesifik
   );
 
   // Auto scroll ke bawah
